@@ -1,0 +1,8 @@
+.contenedor{
+    display: grid;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: black;
+    width: 200px;
+    height: 300px;
+}
