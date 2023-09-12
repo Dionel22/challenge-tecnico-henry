@@ -1,15 +1,21 @@
 .contenedor{
     display: flex;
     border: 1px solid black;
-    border-radius: 15px 0px;
+    border-radius: 45px 0px;
     width: 60em;
     height: 30em;
     position: absolute;
     left: 6%;
-    top: 30px;
+    top: 70px;
+    background-color: rgba(127, 255, 212, 0.422);
 }
 
-
+.h2{
+    display: flex;
+    position: relative;
+    left: 40%;
+    top: -10px;
+}
 
 .name{
     display: flex;

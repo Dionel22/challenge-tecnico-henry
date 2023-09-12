@@ -1,16 +1,22 @@
-const { GETFORMS, POSTFORMS, PUTFORMS } = require("./action");
+const { GETFORMS, POSTFORMS, PUTFORMS, IDFORMS } = require("./action");
 
-const inicialState = {
+const initialState = {
     allForms: [],
     editForms: [],
+    idForms: [],
 }
 
-const reducer = (state = inicialState ,action) => {
-    switch (action.payload) {
+const reducer = (state = initialState ,action) => {
+    switch (action.type) {
         case GETFORMS:
             return {
                 ...state,
                 allForms: action.payload
+            }
+        case IDFORMS:
+            return {
+                ...state,
+                idForms: action.payload
             }
         case PUTFORMS:
             return {
@@ -27,4 +33,4 @@ const reducer = (state = inicialState ,action) => {
     }
 }
 
-module.exports = reducer;
+export default  reducer;
