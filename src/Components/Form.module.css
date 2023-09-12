@@ -1,0 +1,94 @@
+.contenedor{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 15px 0px;
+    width: 60em;
+    height: 30em;
+    position: absolute;
+    left: 6%;
+    top: 30px;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+}
+
+.name{
+    display: flex;
+    position: relative;
+    margin: 10px;
+    flex-direction: row;
+    left: -40px;
+    top: 50px;
+}
+.name{
+    width: 10rem;
+}
+
+.phone{
+    display: flex;
+    position: relative;
+    margin: 10px;
+    flex-direction: column;
+    left: 70px;
+    top: 50px;
+}
+.phone{
+    width: 10rem;
+}
+
+.date{
+    display: flex;
+    position: relative;
+    margin: 10px;
+    flex-direction: column;
+    right: 212%;
+    top: 150px;
+}
+.date{
+    width: 10rem;
+}
+
+.preferredLanguage{
+    display: flex;
+    position: relative;
+    margin: 10px;
+    flex-direction: column;
+    right: 180%;
+    top: 150px;
+}
+.preferredLanguage{
+    width: 10rem;
+}
+
+.howFound{
+    display: flex;
+    position: relative;
+    margin: 10px;
+    flex-direction: column;
+    right: 410%;
+    top: 250px;
+}
+.howFound{
+    width: 10rem;
+}
+
+.newsletterSubscription{
+    display: flex;
+    position: relative;
+    margin: 10px;
+    flex-direction: column;
+    right: 380%;
+    top: 250px;
+}
+.newsletterSubscription{
+    width: 10rem;
+}
+.boton{
+    display: flex;
+    position: relative;
+    margin: 10px;
+    right: 1480px;
+    top: 250px;
+}
