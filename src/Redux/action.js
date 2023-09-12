@@ -23,7 +23,8 @@ export const getForms = () => {
 export const postForms = (body) => {
   return async (dispatch) => {
     try {
-      const response = await axios.post(`http://localhost:3001/form/${body}`);
+      const response = await axios.post(`http://localhost:3001/form`,body);
+      console.log(response.data)
       return dispatch({
         type: POSTFORMS,
         payload: response.data,

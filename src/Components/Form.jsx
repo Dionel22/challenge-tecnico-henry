@@ -1,35 +1,50 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import data from "../data";
 import style from "./Form.module.css";
+import { useDispatch } from "react-redux";
+import { postForms } from "../Redux/action";
 
 export default function Form() {
-  
+  const dispatch = useDispatch();
   const [form, setForm] = useState({
     name: "",
     phone: 0,
     startDate: "",
     preferredLanguage: "",
     howFound: "",
-    newsletterSubscription: "",
+    newsletterSubscription: false
   });
+
+  useEffect(()=>{
+  
+  },[])
 
   const handleForm = (event) => {
     const { name, value } = event.target;
-    //console.log("name",name);
-    //console.log("value",value);
-    setForm({
+    console.log("name",name);
+    console.log("value",value);
+    if(name === "newsletterSubscription"){
+      setForm({
+        ...form,
+        [name]: !form.newsletterSubscription,
+      });
+    }
+    else{
+      setForm({
       ...form,
       [name]: value,
     });
+    }
   };
-  //console.log("form",form);
+  console.log("form",form);
 
   const handleSubmit = (event) => {
-    
+    event.preventDefault();
+    dispatch(postForms(form))
   }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className={style.contenedor}>
         <h2>Formulario</h2>
         {data?.items.map((e, i) => (
