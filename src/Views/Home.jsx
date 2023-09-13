@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(()=>{
     dispatch(getForms())
-  },[])
+  },[dispatch])
 
   return (
     <div>
