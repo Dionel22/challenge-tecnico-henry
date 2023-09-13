@@ -8,7 +8,7 @@ export const POSTFORMS = "POSTFORMS";
 export const getForms = () => {
   return async (dispatch) => {
     try {
-      const response = await axios.get("http://localhost:3001/form");
+      const response = await axios.get("https://servidor-google-form.onrender.com/form");
       console.log(response.data);
       return dispatch({
         type: GETFORMS,
@@ -23,7 +23,7 @@ export const getForms = () => {
 export const idForms = (id) => {
   return async (dispatch) => {
     try {
-      const response = await axios.get(`http://localhost:3001/form/${id}`);
+      const response = await axios.get(`https://servidor-google-form.onrender.com/form/${id}`);
       console.log(response.data);
       return dispatch({
         type: IDFORMS,
@@ -38,7 +38,7 @@ export const idForms = (id) => {
 export const putForms = (body) => {
   return async (dispatch) => {
     try {
-      const response = await axios.put(`http://localhost:3001/form`,body);
+      const response = await axios.put(`https://servidor-google-form.onrender.com/form`,body);
       console.log(response.data)
       return dispatch({
         type: PUTFORMS,
@@ -53,7 +53,7 @@ export const putForms = (body) => {
 export const postForms = (body) => {
   return async (dispatch) => {
     try {
-      const response = await axios.post(`http://localhost:3001/form`,body);
+      const response = await axios.post(`https://servidor-google-form.onrender.com/form`,body);
       return dispatch({
         type: POSTFORMS,
         payload: response.data,

@@ -52,7 +52,7 @@ export default function EditForm() {
         });
       }
     };
-    //console.log("form",form);
+    //console.log("form",editForm);
   
     const handleSubmit = (event) => {
       event.preventDefault();
